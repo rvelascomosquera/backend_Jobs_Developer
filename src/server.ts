@@ -5,7 +5,7 @@ import { UserRouter } from './router/user.router';
 
 class server {
   public app: express.Application = express();
-  private port: number = 3000;
+  private port: number = Number(process.env.PORT) || 3000;
 
   constructor() {
     this.app.use(express.json());
